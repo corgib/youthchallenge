@@ -3,34 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
     <style>
         body, html {
             height: 100%;
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-        }
-        .background-image {
-            background-image: url('images/7b28720b911c4fe1c55a7653380691a4.png');
-            height: 100%;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-image: url('https://hitchhackersguidetodefcon.com/images/7b28720b911c4fe1c55a7653380691a4.png');
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            position: relative;
+        }
+        .content-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            width: 80%;
+            max-width: 800px;
         }
         .iframe-container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            height: 80%;
+            width: 100%;
+            height: 400px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+        .iframe-container iframe {
+            width: 100%;
+            height: 100%;
             border: none;
+        }
+        .header-text {
+            font-size: 2rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+        .update-text {
+            font-size: 1rem;
+            font-weight: 400;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="background-image">
-        <iframe class="iframe-container" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTfEIoSbmrpVbvlbX8p4fv5qZrzgsYChYDSlYkAdiV_FmMHoGeryUS31LT93Dv_CTMfjp9eqb7NfuYq/pubhtml?gid=264714865&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+    <div class="content-container">
+        <span id="OQ1wp0JYKvL61z0c" class="header-text">Recent Scores</span><br>
+        <div class="iframe-container">
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTfEIoSbmrpVbvlbX8p4fv5qZrzgsYChYDSlYkAdiV_FmMHoGeryUS31LT93Dv_CTMfjp9eqb7NfuYq/pubhtml?gid=510617189&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+        </div>
+    </div>
+    <div class="content-container">
+        <span id="OQ1wp0JYKvL61z0c" class="header-text">Leadership Board</span><br>
+        <span id="update-info" class="update-text">These scores may not be completely accurate. <br> They will be updated on both Friday and Saturday night.</span>
+        <div class="iframe-container">
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTfEIoSbmrpVbvlbX8p4fv5qZrzgsYChYDSlYkAdiV_FmMHoGeryUS31LT93Dv_CTMfjp9eqb7NfuYq/pubhtml?gid=264714865&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+        </div>
     </div>
 </body>
 </html>
